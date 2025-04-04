@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #33302B; /* اللون اللي اخترته */
+      background-color: #33302B;
       color: white;
       font-family: Arial, sans-serif;
       display: flex;
@@ -17,14 +17,29 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     img {
       width: 200px;
       margin-bottom: 30px;
     }
+
     p {
       font-size: 1.5rem;
       color: #ccc;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
